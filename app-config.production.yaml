@@ -1,0 +1,10 @@
+app:
+  # Should be the same as backend.baseUrl when using the `app-backend` plugin
+  baseUrl: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
+
+backend:
+  baseUrl: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
+  listen:
+    port: 7000
+  csp:
+    upgrade-insecure-requests: false # for tutorial purposes only
