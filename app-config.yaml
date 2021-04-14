@@ -1,20 +1,20 @@
 app:
-  title: Service Catalog
-  baseUrl: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
+  title: Scaffolded Backstage App
   #baseUrl: http://localhost:3000
+  baseUrl: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
 
 organization:
-  name: NAVEX Global
+  name: My Company
 
 backend:
-  baseUrl: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
   #baseUrl: http://localhost:7000
+  baseUrl: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
   listen:
     port: 7000
   csp:
     connect-src: ["'self'", 'http:', 'https:']
   cors:
-    origin: http://localhost:3000
+    origin: http://backstageio-fargate-alb-2096651039.us-east-1.elb.amazonaws.com
     methods: [GET, POST, PUT, DELETE]
     credentials: true
   database:
@@ -35,9 +35,7 @@ backend:
 integrations:
   github:
     - host: github.com
-      token:
-        #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
-        $env: GITHUB_TOKEN
+      token: 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
     ### Example for how to add your GitHub Enterprise instance using the API:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
@@ -65,18 +63,12 @@ auth:
   providers: 
     github:
       development:
-        clientId: 
-          #ce29efcc03782362321d
-          000b8f411baf9cdbf337
-        clientSecret:
-          #618ef15f9f9332cb037d0cb47a60967d479ffd4f 
-          e93be9beff576be73781356f2207260065472b4a
+        clientId: 2d8733efb35cb69b66e1
+        clientSecret: 261341bac337fcc4a2a1b7804fc1d41a947d95e3
 
 scaffolder:
   github:
-    token:
-      #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
-      $env: GITHUB_TOKEN
+    token: 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
     visibility: public # or 'internal' or 'private'
 
 catalog:
